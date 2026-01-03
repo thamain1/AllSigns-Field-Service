@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 220 38% 48%;
+    --color-primary-light: 220 38% 60%;
+    --color-primary-dark: 220 38% 36%;
+    --color-secondary: 0 72% 51%;
+    --color-secondary-light: 0 72% 63%;
+    --color-secondary-dark: 0 72% 39%;
+    --color-accent: 0 0% 98%;
+    --color-success: 142 71% 45%;
+    --color-warning: 45 93% 47%;
+    --color-error: 0 72% 51%;
+    --color-background: 0 0% 98%;
+    --color-surface: 0 0% 100%;
+    --color-text: 222 47% 11%;
+    --color-text-secondary: 215 16% 47%;
+    --color-border: 214 32% 91%;
+  }
+
+  .dark {
+    --color-primary: 220 38% 58%;
+    --color-primary-light: 220 38% 70%;
+    --color-primary-dark: 220 38% 46%;
+    --color-secondary: 0 72% 61%;
+    --color-secondary-light: 0 72% 73%;
+    --color-secondary-dark: 0 72% 49%;
+    --color-accent: 222 47% 11%;
+    --color-success: 142 71% 55%;
+    --color-warning: 45 93% 57%;
+    --color-error: 0 72% 61%;
+    --color-background: 222 47% 11%;
+    --color-surface: 217 33% 17%;
+    --color-text: 0 0% 98%;
+    --color-text-secondary: 214 32% 71%;
+    --color-border: 217 33% 27%;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-3 py-2 md:px-4 md:py-2 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 text-sm md:text-base;
+  }
+
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500;
+  }
+
+  .btn-secondary {
+    @apply bg-red-600 text-white hover:bg-red-700 focus:ring-red-500;
+  }
+
+  .btn-outline {
+    @apply border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 focus:ring-gray-500;
+  }
+
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-md border border-gray-200 dark:border-gray-700;
+  }
+
+  .input {
+    @apply w-full px-3 py-2 md:px-4 md:py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-sm md:text-base;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-blue {
+    @apply bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200;
+  }
+
+  .badge-red {
+    @apply bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200;
+  }
+
+  .badge-green {
+    @apply bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200;
+  }
+
+  .badge-yellow {
+    @apply bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200;
+  }
+
+  .badge-gray {
+    @apply bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300;
+  }
+}
+
+body {
+  @apply bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Prevent zoom on input focus on iOS */
+@media screen and (max-width: 768px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="tel"],
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
